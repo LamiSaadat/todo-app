@@ -1,4 +1,9 @@
-<form [formGroup]="todoForm" (ngSubmit)="onSubmit()" novalidate>
+<form
+  *ngIf="showForm"
+  [formGroup]="todoForm"
+  (ngSubmit)="onSubmit()"
+  novalidate
+>
   <ion-item>
     <ion-label>Todo</ion-label>
     <ion-input
