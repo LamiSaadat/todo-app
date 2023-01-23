@@ -1,0 +1,24 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()" novalidate>
+  <ion-item>
+    <ion-label>Todo</ion-label>
+    <ion-input
+      formControlName="text"
+      type="text"
+      placeholder="Get groceries..."
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Day & Time</ion-label>
+    <ion-input
+      formControlName="day"
+      type="text"
+      placeholder="January 22 1:00pm"
+    ></ion-input>
+    <!-- <ion-datetime
+      (ionChange)="getDate($event)"
+      formControlName="day"
+      [value]="defaultDate"
+    ></ion-datetime> -->
+  </ion-item>
+  <ion-button type="submit">Add</ion-button>
+</form>

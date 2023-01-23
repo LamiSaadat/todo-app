@@ -19,4 +19,8 @@ export class TodosPage implements OnInit {
   getAllTodos() {
     this.todoService.getTodos().subscribe((res) => this.todos.push(...res));
   }
+
+  // addTodo(todo: Todo) {
+  //   this.todoService.addTodo(todo).subscribe((todo) => this.todos.push(todo));
+  // }
 }
