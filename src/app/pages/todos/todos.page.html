@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>todos</ion-title>
+    <ion-title>Todo App</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let item of todos">
+      <ion-label
+        >{{item.text}}
+        <p>{{item.day}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

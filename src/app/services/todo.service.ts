@@ -15,6 +15,10 @@ export class TodoService {
     return this.http.get<Todo[]>(this.apiURL);
   }
 
+  addTodo(todo: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.apiURL, todo);
+  }
+
   deleteTodo(todo: Todo): Observable<Todo> {
     const url = `${this.apiURL}/${todo.id}`;
 
@@ -25,9 +29,5 @@ export class TodoService {
     const url = `${this.apiURL}/${todo.id}`;
 
     return this.http.put<Todo>(url, todo);
-  }
-
-  addTodo(todo: Todo): Observable<Todo> {
-    return this.http.post<Todo>(this.apiURL, todo);
   }
 }
