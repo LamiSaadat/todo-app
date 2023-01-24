@@ -1,9 +1,10 @@
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of todos">
+    <ion-item *ngFor="let todo of todos">
+      <ion-checkbox slot="start" (click)="toggleCompleted(todo)"></ion-checkbox>
       <ion-label
-        >{{item.text}}
-        <p>{{item.day}}</p>
+        >{{todo.text}}
+        <p>{{todo.day}}</p>
       </ion-label>
     </ion-item>
   </ion-list>

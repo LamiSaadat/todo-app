@@ -9,6 +9,7 @@ import { Todo } from 'src/app/Todo-Interface';
 })
 export class TodosPage implements OnInit {
   todos: Todo[] = [];
+  completed: boolean = false;
 
   constructor(private todoService: TodoService) {}
 
@@ -18,6 +19,13 @@ export class TodosPage implements OnInit {
 
   getAllTodos() {
     this.todoService.getTodos().subscribe((res) => this.todos.push(...res));
+  }
+
+  toggleCompleted(todo: Todo) {
+    todo.completed = !todo.completed;
+    console.log(todo.completed);
+
+    this.todoService.updateTodo(todo).subscribe();
   }
 
   // addTodo(todo: Todo) {
