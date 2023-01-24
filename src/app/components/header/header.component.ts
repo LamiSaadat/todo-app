@@ -21,6 +21,5 @@ export class HeaderComponent implements OnInit {
 
   toggleForm() {
     this.uiService.toggleForm();
-    console.log(this.showForm);
   }
 }

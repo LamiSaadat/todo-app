@@ -23,7 +23,6 @@ export class TodosPage implements OnInit {
 
   toggleCompleted(todo: Todo) {
     todo.completed = !todo.completed;
-    console.log(todo.completed);
 
     this.todoService.updateTodo(todo).subscribe();
   }
@@ -35,7 +34,7 @@ export class TodosPage implements OnInit {
         () => (this.todos = this.todos.filter((item) => item.id !== todo.id))
       );
   }
-  // addTodo(todo: Todo) {
-  //   this.todoService.addTodo(todo).subscribe((todo) => this.todos.push(todo));
-  // }
+  addTodo(todo: Todo) {
+    this.todoService.addTodo(todo).subscribe((todo) => this.todos.push(todo));
+  }
 }

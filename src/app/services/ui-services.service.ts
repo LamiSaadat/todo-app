@@ -12,12 +12,10 @@ export class UiServicesService {
 
   toggleForm(): void {
     this.showForm = !this.showForm;
-    console.log(this.showForm);
     this.subject.next(this.showForm);
   }
 
   onToggle(): Observable<any> {
-    console.log(this.showForm);
     return this.subject.asObservable();
   }
 }

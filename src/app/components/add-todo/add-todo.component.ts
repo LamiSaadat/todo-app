@@ -50,11 +50,10 @@ export class AddTodoComponent implements OnInit {
 
     const newTodo = this.todoForm.value;
 
-    console.log(newTodo);
-
     this.addTodo(newTodo);
 
     this.text = '';
     this.day = '';
+    this.showForm = false;
   }
 }
