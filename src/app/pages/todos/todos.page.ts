@@ -28,6 +28,13 @@ export class TodosPage implements OnInit {
     this.todoService.updateTodo(todo).subscribe();
   }
 
+  deleteTodo(todo: Todo) {
+    this.todoService
+      .deleteTodo(todo)
+      .subscribe(
+        () => (this.todos = this.todos.filter((item) => item.id !== todo.id))
+      );
+  }
   // addTodo(todo: Todo) {
   //   this.todoService.addTodo(todo).subscribe((todo) => this.todos.push(todo));
   // }

@@ -6,6 +6,9 @@
         >{{todo.text}}
         <p>{{todo.day}}</p>
       </ion-label>
+      <ion-button fill="clear" (click)="deleteTodo(todo)">
+        <ion-icon name="trash-outline" slot="end" size="small"></ion-icon>
+      </ion-button>
     </ion-item>
   </ion-list>
 </ion-content>
